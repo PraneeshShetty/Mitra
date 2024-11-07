@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  section {
+    width: 80%;
+    height: 90vh;
+    background: rgb(237, 237, 237, 0.9);
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+  }
+  
+  .navbar .logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .menu li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .menu li a:hover {
+    color: #f2672e;
+  }
+  
+  .mainarea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  
+  .left {
+    width: 45%;
+  }
+  
+  .left h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .event-form input,
+  .event-form select,
+  .event-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .event-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2672e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event-form button:hover {
+    background-color: #f2662e;
+  }
+  
+  .right {
+    width: 45%;
+  }
+  
+  .right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .event-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-card h4 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .event-card button {
+    padding: 8px 16px;
+    background-color: #f2672e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .event-card button:hover {
+    background-color: #f2662e;
+  }
+  

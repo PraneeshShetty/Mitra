@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Directory</title>
+    <link rel="stylesheet" href="volunteer-directory.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  
+    <section class="volunteer-directory">
+      <!-- Header Section -->
+      <div class="header">
+        <div class="logo">Mitra</div>
+        <nav class="navbar">
+          <ul class="menu">
+            <li><a href="./">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="community-directory.html">Directory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h1>Volunteer Profiles</h1>
+        <p>Find a volunteer to collaborate with based on their skills and expertise.</p>
+
+        <!-- Search & Filter Section -->
+        <div class="search-filter">
+          <input type="text" placeholder="Search by name or skill..." class="search-bar" />
+          <
+          <option value="education">Education</option>
+          <option value="fundraising">Fundraising</option>
+          <option value="event-planning">Event Planning</option>
+        </select>
+      </div>
+
+      <!-- Volunteer Profiles Grid -->
+      <div class="profiles">
+        <div class="profile-card">
+          <img src="volunteer.jpg" alt="Volunteer 1" />
+          <h2>Jane Doe</h2>
+          <p>Role: Event Coordinator</p>
+          <p>Skills: Event Planning, Public Speaking, Fundraising</p>
+          <button class="connect-btn" onclick="toggleContactInfo('contact1')">Connect</button>
+          <div id="contact1" class="contact-info">
+            <p>Email: janedoe@example.com</p>
+            <p>Phone: 123-456-7890</p>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img src="volunteer.jpg" alt="Volunteer 2" />
+          <h2>John Smith</h2>
+          <p>Role: Community Outreach</p>
+          <p>Skills: Outreach, Education, Volunteer Coordination</p>
+          <button class="connect-btn" onclick="toggleContactInfo('contact2')">Connect</button>
+          <div id="contact2" class="contact-info">
+            <p>Email: johnsmith@example.com</p>
+            <p>Phone: 987-654-3210</p>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img src="volunteer.jpg" alt="Volunteer 3" />
+          <h2>Emily Johnson</h2>
+          <p>Role: Fundraising Specialist</p>
+          <p>Skills: Fundraising, Grant Writing, Event Planning</p>
+          <button class="connect-btn" onclick="toggleContactInfo('contact3')">Connect</button>
+          <div id="contact3" class="contact-info">
+            <p>Email: emilyj@example.com</p>
+            <p>Phone: 543-210-9876</p>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img src="volunteer.jpg" alt="Volunteer 4" />
+          <h2>Michael Brown</h2>
+          <p>Role: Volunteer Manager</p>
+          <p>Skills: Team Leadership, Volunteer Coordination, Event Planning</p>
+          <button class="connect-btn" onclick="toggleContactInfo('contact4')">Connect</button>
+          <div id="contact4" class="contact-info">
+            <p>Email: michaelbrown@example.com</p>
+            <p>Phone: 321-654-9870</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Function to toggle the visibility of contact information after connecting
+    function toggleContactInfo(contactId) {
+      const contactDiv = document.getElementById(contactId);
+      // Toggle the visibility of the contact info
+      if (contactDiv.style.display === "none" || contactDiv.style.display === "") {
+        contactDiv.style.display = "block";
+      } else {
+        contactDiv.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

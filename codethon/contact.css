@@ -1,0 +1,118 @@
+/* General Styles */
+.contact-section {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background: rgba(237, 237, 237, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    box-shadow: -15px 17px 17px rgb(10, 10, 10, 0.25);
+  }
+  
+  .contact-info {
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .contact-info h1 {
+    font-size: 48px;
+    font-weight: 600;
+    color: #f2672e;
+  }
+  
+  .contact-info h3 {
+    font-size: 32px;
+    margin-top: 40px;
+    color: #ec5899;
+  }
+  
+  /* Contact Info (Vertical Layout) */
+  .contact-details {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .contact-item {
+    margin-bottom: 20px;
+  }
+  
+  .contact-item h3 {
+    font-size: 24px;
+    margin: 0;
+    color: #f2672e;
+  }
+  
+  .contact-item p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: white;
+  }
+  
+  /* Volunteer Community Cards - Horizontal Layout with Card Structure */
+  .volunteer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute cards evenly */
+    gap: 30px; /* Space between cards */
+    margin-top: 40px;
+    padding: 20px 0; /* Add top and bottom padding for spacing */
+  }
+  
+  .contact-card {
+    width: 250px; /* Adjust width to create a smaller card for horizontal display */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px; /* Add padding inside the card for better spacing */
+    text-align: center; /* Center content inside the card */
+    margin-bottom: 20px; /* Space below each card */
+    color: white;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-header h4 {
+    font-size: 24px;
+    color: #f2672e;
+  }
+  
+  .contact-body .contact-link {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #f2672e;
+  }
+  
+  .contact-link i {
+    margin-right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .volunteer-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-card {
+      width: 80%; /* Make cards take up more width on small screens */
+      margin-bottom: 20px;
+    }
+  }
+  

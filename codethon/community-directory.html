@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Directory</title>
+    <link rel="stylesheet" href="community-directory.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Add some basic styles for the modal */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Basic styling for buttons */
+      .apply-btn {
+        background-color: #f2672e;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .apply-btn:hover {
+        background-color: #f2662e;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="community-directory">
+      <!-- Header Section -->
+      <div class="header">
+        <div class="logo">Mitra</div>
+        <nav class="navbar">
+          <ul class="menu">
+            <li><a href="./">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Community Directory</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <h1>Community Clubs</h1>
+        <p>Explore different clubs and communities available for you to join.</p>
+
+        <!-- Search & Filter Section -->
+        <div class="search-filter">
+          <input type="text" placeholder="Search for a community..." class="search-bar" />
+          <select class="filter">
+            <option value="">Filter by Category</option>
+            <option value="tech">Tech</option>
+            <option value="business">Business</option>
+            <option value="sports">Sports</option>
+            <option value="art">Art</option>
+          </select>
+        </div>
+
+        <!-- Community Clubs Grid -->
+        <div class="clubs">
+          <div class="club-card">
+            <img src="gdsc.png" alt="GDSC Club" />
+            <h2>Google Developer Student Clubs</h2>
+            <p>Empowering students to grow their skills in technology through workshops, hackathons, and mentorship.</p>
+            <p><strong>Event Date:</strong> March 25, 2024</p>
+            <p><strong>Event Time:</strong> 4:00 PM - 6:00 PM</p>
+            <p><strong>Event Type:</strong> Workshop</p>
+            <button class="connect-btn" onclick="openModal('gdscModal')">Join Now</button>
+          </div>
+
+          <div class="club-card">
+            <img src="microsoft.png" alt="Microsoft Student Club" />
+            <h2>Microsoft Student Club</h2>
+            <p>A community of student leaders passionate about Microsoft technologies. We organize events, workshops, and hackathons.</p>
+            <p><strong>Event Date:</strong> April 10, 2024</p>
+            <p><strong>Event Time:</strong> 3:00 PM - 5:00 PM</p>
+            <p><strong>Event Type:</strong> Workshop</p>
+            <button class="connect-btn" onclick="openModal('microsoftModal')">Join now</button>
+          </div>
+
+          <div class="club-card">
+            <img src="WhatsApp Image 2024-11-07 at 15.22.11_f0751604.jpg" alt="Srinivas Student Open Source Community" />
+            <h2>Srinivas Student Open Source Community</h2>
+            <p>An open-source community fostering collaboration and contributions in software development and technology.</p>
+            <p><strong>Event Date:</strong> May 15, 2024</p>
+            <p><strong>Event Time:</strong> 2:00 PM - 4:00 PM</p>
+            <p><strong>Event Type:</strong> Hackathon</p>
+            <button class="connect-btn" onclick="openModal('ssoscModal')">Join Now</button>
+          </div>
+
+          <div class="club-card">
+            <img src="WhatsApp Image 2024-11-07 at 15.22.44_ce5083c1.jpg" alt="AI Club" />
+            <h2>AI and Robotics Club</h2>
+            <p>Explore the future of artificial intelligence and robotics with hands-on projects and knowledge-sharing sessions.</p>
+            <p><strong>Event Date:</strong> June 1, 2024</p>
+            <p><strong>Event Time:</strong> 10:00 AM - 12:00 PM</p>
+            <p><strong>Event Type:</strong> Seminar</p>
+            <button class="connect-btn" onclick="openModal('aiClubModal')">Join Now</button>
+          </div>
+
+          <!-- Additional Clubs can go here... -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Event Details -->
+    <div id="gdscModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('gdscModal')">&times;</span>
+        <h2>Google Developer Student Clubs</h2>
+        <p>Event Date: March 25, 2024</p>
+        <p>Event Time: 4:00 PM - 6:00 PM</p>
+        <p>Event Type: Workshop</p>
+        <p>This event is aimed at empowering students to grow their skills in technology. Join us for workshops, hackathons, and mentorship.</p>
+        <button class="apply-btn" onclick="openGoogleForm()">Apply Now</button>
+      </div>
+    </div>
+
+    <div id="microsoftModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('microsoftModal')">&times;</span>
+        <h2>Microsoft Student Club</h2>
+        <p>Event Date: April 10, 2024</p>
+        <p>Event Time: 3:00 PM - 5:00 PM</p>
+        <p>Event Type: Workshop</p>
+        <p>Join our community of student leaders passionate about Microsoft technologies. We organize events, workshops, and hackathons.</p>
+        <button class="apply-btn" onclick="openGoogleForm()">Apply Now</button>
+      </div>
+    </div>
+
+    <!-- Modal for Other Clubs -->
+    <div id="ssoscModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('ssoscModal')">&times;</span>
+        <h2>Srinivas Student Open Source Community</h2>
+        <p>Event Date: May 15, 2024</p>
+        <p>Event Time: 2:00 PM - 4:00 PM</p>
+        <p>Event Type: Hackathon</p>
+        <p>Join our open-source community for a hands-on hackathon focused on software development and collaboration.</p>
+        <button class="apply-btn" onclick="openGoogleForm()">Apply Now</button>
+      </div>
+    </div>
+
+    <div id="aiClubModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('aiClubModal')">&times;</span>
+        <h2>AI and Robotics Club</h2>
+        <p>Event Date: June 1, 2024</p>
+        <p>Event Time: 10:00 AM - 12:00 PM</p>
+        <p>Event Type: Seminar</p>
+        <p>Explore the future of artificial intelligence and robotics with hands-on projects and knowledge-sharing sessions.</p>
+        <button class="apply-btn" onclick="openGoogleForm()">Apply Now</button>
+      </div>
+    </div>
+
+    <script>
+      // Open the modal
+      function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+      }
+
+      // Close the modal
+      function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+      }
+
+      // Function to open Google Form for registration
+      function openGoogleForm() {
+        const googleFormURL = "https://forms.gle/Hc1MDo16MxuRKAh36"; // Replace with your Google Form link
+        window.open(googleFormURL, "_blank");
+      }
+    </script>
+  </body>
+</html>

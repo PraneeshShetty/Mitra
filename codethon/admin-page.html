@@ -1,0 +1,61 @@
++ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <!-- Admin Info Section -->
+      <div class="admin-info">
+        <div class="admin-avatar">
+          <img src="admin-avatar.jpg" alt="Admin Avatar" />
+        </div>
+        <div class="admin-details">
+          <h2>John Doe</h2>
+          <p class="role">Community Manager</p>
+          <p class="email">johndoe@example.com</p>
+          <p class="status">Online</p>
+        </div>
+      </div>
+
+      <!-- Chat Box Section -->
+      <div class="chat-box">
+        <div class="chat-header">
+          <h3>Chat with Admin</h3>
+        </div>
+        <div class="chat-body">
+          <div id="chat-window"></div>
+        </div>
+        <div class="chat-input">
+          <input type="text" id="message-input" placeholder="Type your message..." />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById('send-btn').addEventListener('click', function () {
+        var inputField = document.getElementById('message-input');
+        var messageText = inputField.value.trim();
+        if (messageText) {
+          var chatWindow = document.getElementById('chat-window');
+          var message = document.createElement('div');
+          message.classList.add('message', 'user');
+          message.textContent = messageText;
+          chatWindow.appendChild(message);
+          inputField.value = ''; // Clear input field
+          chatWindow.scrollTop = chatWindow.scrollHeight; // Auto-scroll to the latest message
+        }
+      });
+    </script>
+  </body>
+</html>

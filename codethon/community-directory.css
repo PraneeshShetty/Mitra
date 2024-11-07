@@ -1,0 +1,177 @@
+/* General Reset and Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background: url('thumbnail.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+  }
+  
+  /* Community Directory Section */
+  .community-directory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  }
+  
+  /* Header Section */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+  }
+  
+  .logo {
+    font-size: 36px;
+    color: white;
+    background: linear-gradient(to right, #f59e0b, #ef4444);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+  }
+  
+  .navbar {
+    width: 50%;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 40px;
+  }
+  
+  .menu li a {
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .menu li a:hover {
+    color: #f2672e;
+  }
+  
+  /* Main Content Section */
+  .main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Search & Filter Section */
+  .search-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  /* Clubs Grid Layout */
+  .clubs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .club-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .club-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .club-card h2 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: #f2672e; /* Adds color to the title */
+  }
+  
+  .club-card p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .connect-btn {
+    padding: 10px 20px;
+    background: #f2672e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .connect-btn:hover {
+    background: #f59e0b;
+  }
+  
+  /* Hover Effect on Club Cards */
+  .club-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .search-filter {
+      flex-direction: column;
+    }
+  }
+  
